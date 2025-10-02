@@ -3,16 +3,23 @@
 
 int main(int argc, char *argv[])
 {
-  int num, i;
-  int sum = 0;
+  int n1, n2, result;
+  char c;
   
-  printf("input a number: ");
-  scanf("%i", &num);
-  
-  for(i=0; i<=num; i++)
-      sum = sum + i;
+  printf("enter the calculation : ");
+  scanf("%i %c %i", &n1, &c, &n2);
 
-  printf("The result is %i\n", sum);
+  if(c == '+')
+       result = n1 + n2;
+  else if(c == '-')
+       result = n1 - n2;
+  else if(c == '*')
+       result = n1 * n2;
+  else if(c == '/')
+       result = n1 / n2;
+       
+  printf("= %i\n", result);
+
   
   system("PAUSE");
   return 0;

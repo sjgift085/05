@@ -3,23 +3,24 @@
 
 int main(int argc, char *argv[])
 {
-  int n1, n2, result;
-  char c;
+  int x, count = 0;
+  int answer = 59;
+
+  do{
+    printf("Guess a number : ");
+    scanf("%i", &x);
+    
+    count = count + 1;
+    
+    if(x > answer)
+         printf("low!\n");
+    else if(x < answer)
+         printf("high!\n");
+    
+    }
+  while(x != answer);
   
-  printf("enter the calculation : ");
-  scanf("%i %c %i", &n1, &c, &n2);
-
-  if(c == '+')
-       result = n1 + n2;
-  else if(c == '-')
-       result = n1 - n2;
-  else if(c == '*')
-       result = n1 * n2;
-  else if(c == '/')
-       result = n1 / n2;
-       
-  printf("= %i\n", result);
-
+  printf("Congratulation! trails : %i\n", count);
   
   system("PAUSE");
   return 0;

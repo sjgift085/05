@@ -3,17 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-  int num;
+  int num, i;
+  int sum = 0;
   
-  printf("정수 하나를 입력하시오 :");
+  printf("input a number: ");
   scanf("%i", &num);
   
-  if(num < 0)
-      num = -num;
+  for(i=0; i<=num; i++)
+      sum = sum + i;
+
+  printf("The result is %i\n", sum);
   
-  printf("절대값은 %i 입니다.\n", num); 
-  
-  
-  system("PAUSE");	
+  system("PAUSE");
   return 0;
 }
